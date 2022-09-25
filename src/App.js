@@ -101,10 +101,10 @@ export default function App() {
 
         </div>
         <div className="jumbotron">
-          <h1>Temperatura: {state.novaTemperatura}</h1>
+          {/* <h1>Temperatura: {state.novaTemperatura}</h1>
           <h1>Umidade: {state.novaUmidade}</h1>
           <h1>Luminosidade: {state.novaLuminosidade}</h1>
-          <h1>Umidade ar: {state.novaUmidadeAr}</h1>
+          <h1>Umidade ar: {state.novaUmidadeAr}</h1> */}
           <button onClick={sendIrrigate} className="btn btn-primary btn-lg">Irrigar</button>
         </div>
     </>
