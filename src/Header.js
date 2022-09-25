@@ -76,10 +76,10 @@ class Header extends Component {
           <Typography variant="h6" className={classes.title}>
             Terrarium Dashboard
           </Typography>
-          <Chip className={classes.chip} avatar={<Avatar>°C</Avatar>} label={data.temperature} />
-          <Chip className={classes.chip} avatar={<Avatar>Bi</Avatar>} label={data.humidity} />
+          <Chip className={classes.chip} avatar={<Avatar>°C</Avatar>} label={data.temperatures} />
+          <Chip className={classes.chip} avatar={<Avatar>Bi</Avatar>} label={data.humidities} />
           <Chip className={classes.chip} avatar={<Avatar>Rh%</Avatar>} label={data.humiditiesAr} />
-          <Chip className={classes.chip} avatar={<Avatar>Lx</Avatar>} label={data.lux} />
+          <Chip className={classes.chip} avatar={<Avatar>Lx</Avatar>} label={data.lights} />
           {/* <WbIncandescentOutlinedIcon className={classes.lightStatus} color={lightColor} /> */}
           {/* <Button onClick={this.onButtonClick} variant="contained" color="secondary">
             {buttonText}
