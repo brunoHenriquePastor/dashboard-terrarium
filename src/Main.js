@@ -3,7 +3,6 @@ import React, { useState, useEffect, Component } from 'react';
 import Content from './Content'
 import Header from './Header'
 
-//import * as mqtt from 'react-paho-mqtt';
 
 import mqtt from 'mqtt';
 
@@ -40,12 +39,6 @@ export default class Main extends Component {
         this.handleJsonMessage(JSON.parse(message.toString()));
     })
   }
-
-  // client.on('message', function (_topic, message) {
-  //   // message is Buffer
-  //   console.log(message.toString())
-  //   client.end()
-  // })
 
    
 
@@ -92,11 +85,6 @@ export default class Main extends Component {
           lights={lights}
           humiditiesAr={humiditiesAr}
           humidities={humidities} />
-      {/* <h1>Temperatura: {temperatura}</h1>
-      <h1>Umidade: {state.novaUmidade}</h1>
-      <h1>Luminosidade: {lights}</h1>
-      <h1>Umidade ar: {humidities}</h1>
-      <button onClick={sendIrrigate} className="btn btn-primary btn-lg">Irrigar</button> */}
     </div>
     );
   }
