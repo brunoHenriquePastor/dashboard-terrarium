@@ -21,18 +21,7 @@ export default function App() {
     novaUmidadeAr: '',
   };
 
-
-
-  // const { novaTemperatura, novaUmidade, novaLuminosidade, novaUmidadeAr } = '';
   const [client, setClient] = React.useState(null);
-  // const [novaTemperatura, setnovaTemperatura] = React.useState(null);
-  // const [novaUmidade, setnovaUmidade] = React.useState(null);
-  // const [novaLuminosidade, setnovaLuminosidade] = React.useState(null);
-  // const [novaUmidadeAr , setnovaUmidadeAr] = React.useState(null);
-  const _topic = ["greenhouse/umi",
-      "greenhouse/temp",
-      "greenhouse/umi_ar",
-      "greenhouse/lumi"];
   const _options = {qos:1,timeout:5};
 
   React.useEffect(() => {
@@ -57,28 +46,6 @@ export default function App() {
 
   }
 
-  // called when subscribing topic(s)
-  const _onSubscribe = () => {
-    client.connect({ onSuccess: () => {
-      _init();
-      for (var i = 0; i < _topic.length; i++) {
-        inputChange(client.subscribe(_topic[i], _options),state.novaTemperatura);
-      }}
-    }); // called when the client connects
-  }
-
-  // called when subscribing topic(s)
-  const _onUnsubscribe = () => {
-    for (var i = 0; i < _topic.length; i++) {
-      client.unsubscribe(_topic[i], _options);
-    }
-  }
-
-  // called when disconnecting the client
-  const _onDisconnect = () => {
-    client.disconnect();
-  }
-
 
   const sendIrrigate = () => {
       client.connect({ onSuccess: () => {
@@ -101,10 +68,6 @@ export default function App() {
 
         </div>
         <div className="jumbotron">
-          {/* <h1>Temperatura: {state.novaTemperatura}</h1>
-          <h1>Umidade: {state.novaUmidade}</h1>
-          <h1>Luminosidade: {state.novaLuminosidade}</h1>
-          <h1>Umidade ar: {state.novaUmidadeAr}</h1> */}
           <button onClick={sendIrrigate} className="btn btn-primary btn-lg">Irrigar</button>
         </div>
     </>
