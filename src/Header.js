@@ -36,31 +36,7 @@ class Header extends Component {
     this.state = {}
   }
 
-  // onButtonClick = () => {
-  //   this.switchLightStatus()
-  // }
-
-  // switchLightStatus = () => {
-  //   fetch("http://18.140.241.253/xdk/lightStatus", { method: "POST" })
-  //     .then(response => {
-  //       console.log("Successfull");
-  //     }).catch(error => {
-  //       console.log(`Error occured when switch light status: ${error}`)
-  //     })
-  // }
-
-  // componentDidUpdate() {
-  //   const { lux, lightStatus } = this.props.data
-
-  //   if (lux <= 10 && lightStatus === 0) {
-  //     // Light is off and too dark
-  //     this.switchLightStatus();
-  //   } else if (lux >= 100 && lightStatus === 1) {
-  //     // Light is on and too bright
-  //     this.switchLightStatus();
-  //   }
-  // }
-
+ 
   render() {
     const { classes, data } = this.props
     const { lightStatus } = data;
@@ -69,9 +45,9 @@ class Header extends Component {
     return (
       <AppBar>
         <Toolbar>
-          <IconButton href="http://justindannguyen.com" edge="start" className={classes.menuButton}>
-            <img alt='Logo' src={Logo} style={{ width: 40 }} />
-          </IconButton>
+          {/* {/* <IconButton edge="start" className={classes.menuButton}>
+            <img alt='Logo' src={Logo} style={{ width: 40 }} /> 
+          </IconButton> */}
           <Typography variant="h6" className={classes.title}>
             Terrarium Dashboard
           </Typography>
