@@ -15,16 +15,16 @@ export const Content = props => {
     <div className={classes.content}>
       <Grid container>
         <Grid item sm={12} md={6}>
-          <Chart chartTitle="Temperature" data={props.temperatures} />
+          <Chart chartTitle="Temperatura" data={props.temperatures} />
         </Grid>
         <Grid item sm={12} md={6}>
-          <Chart chartTitle="Humidity" data={props.humidities} />
+          <Chart chartTitle="Umidade" data={props.humidities} />
         </Grid>
         <Grid item sm={12} md={6}>
-          <Chart chartTitle="Light" data={props.lights} />
+          <Chart chartTitle="Iluminação" data={props.lights} />
         </Grid>
         <Grid item sm={12} md={6}>
-          <Chart chartTitle="Air Humidity" data={props.humiditiesAr} />
+          <Chart chartTitle="Umidade do ar" data={props.humiditiesAr} />
         </Grid>
       </Grid>
     </div>

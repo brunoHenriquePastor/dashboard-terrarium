@@ -52,8 +52,8 @@ class Header extends Component {
             Terrarium Dashboard
           </Typography>
           <Chip className={classes.chip} avatar={<Avatar>°C</Avatar>} label={data.temperatures} />
-          <Chip className={classes.chip} avatar={<Avatar>Bi</Avatar>} label={data.humidities} />
-          <Chip className={classes.chip} avatar={<Avatar>Rh%</Avatar>} label={data.humiditiesAr} />
+          <Chip className={classes.chip} avatar={<Avatar>U</Avatar>} label={data.humidities} />
+          <Chip className={classes.chip} avatar={<Avatar>U.A.%</Avatar>} label={data.humiditiesAr} />
           <Chip className={classes.chip} avatar={<Avatar>Lx</Avatar>} label={data.lights} />
           {/* <WbIncandescentOutlinedIcon className={classes.lightStatus} color={lightColor} /> */}
           {/* <Button onClick={this.onButtonClick} variant="contained" color="secondary">

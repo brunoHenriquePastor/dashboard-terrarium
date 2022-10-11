@@ -27,7 +27,7 @@ export default class Main extends Component {
 
 
   componentDidMount() {
-    this.client = mqtt.connect("ws://broker.emqx.io:8083/mqtt"); //, Number(8083), "tcp/mqtt", this._onConnectionLost, this._onMessageArrived);
+    this.client = mqtt.connect("ws://broker.emqx.io:1883/mqtt"); //,test.mosquitto.org Number(8083), "tcp/mqtt", this._onConnectionLost, this._onMessageArrived);
     this.client.on("connect", () => {
       console.log("connected");
       // for (var i = 0; i < this._topic.length; i++) {
